@@ -1,6 +1,5 @@
 package comparacionmetodosdeordenacion;
 public class Ordenar2Vector implements OrdenarVector{
-    
     @Override
     public String nombreMetodo(){
         return "Contadores de distribución";
@@ -20,9 +19,11 @@ public class Ordenar2Vector implements OrdenarVector{
     }
     
     private int[] ordena2(int[] vec, DatosEstadisticos de){
+        double time = System.nanoTime();
+        
         int[] vecs = new int[vec.length];
         int[] frec = new int[maximo(vec)+2];
-        double time = System.currentTimeMillis();
+        //System.out.println("Tiempo inicial: "+time);
         for (int i = 0; i < frec.length; i++) {
             frec[i] = 0;
         }
@@ -45,7 +46,7 @@ public class Ordenar2Vector implements OrdenarVector{
             de.añadeMovimiento();
             de.añadeMovimiento();
         }
-        de.estableceTiempo(System.currentTimeMillis() - time);
+        de.estableceTiempo((System.nanoTime() - time)/1000000.);
         return vecs;
     }
 }

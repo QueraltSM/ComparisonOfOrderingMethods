@@ -1,6 +1,5 @@
 package comparacionmetodosdeordenacion;
 public class ComparaMetodos {
-
     static int[] sizes = {1000,2000,4000,8000,16000,32000};
     
     public static void main(String[] args) {
@@ -28,7 +27,7 @@ public class ComparaMetodos {
         System.out.println("\nVector aleatorio\n");
         System.out.printf("        %-10s %-15s %-10s\n", "Tiempo", "Comparaciones", "Movimientos");
         
-        for(int i = 0; i<sizes.length; i++){
+        for (int i = 0; i<sizes.length; i++){
             System.out.printf("%8d %10f %15f %10f\n",
                 sizes[i],
                 mediaDeVecRnd[i].dameMediaTiempos(),
